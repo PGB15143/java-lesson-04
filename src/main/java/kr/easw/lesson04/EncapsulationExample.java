@@ -1,4 +1,4 @@
-package kr.easw.lesson4;
+package kr.easw.lesson04;
 /**
  * 해당 클래스는 Car을 상속받아 연비 값을 확인하는 코드를 갖고 있습니다.
  *

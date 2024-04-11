@@ -1,4 +1,4 @@
-package kr.easw.lesson4;
+package kr.easw.lesson04;
 
 public class ImplementationExample {
 

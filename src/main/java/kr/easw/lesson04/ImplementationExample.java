@@ -1,4 +1,4 @@
-package kr.easw.lesson04;
+package kr.easw.lesson4;
 
 public class ImplementationExample {
 
@@ -8,6 +8,7 @@ public class ImplementationExample {
             return;
         }
         System.out.println("오답입니다.");
+    System.out.println(onTest(1000));
     }
 
     private static String onTest(int value) {
@@ -24,7 +25,7 @@ public class ImplementationExample {
          * "TestValue"
          */
         public String getString() {
-            throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+            return "TestValue";
         }
 
         /**
@@ -44,7 +45,8 @@ public class ImplementationExample {
          * @param data 계산이 진행되어야 할 값
          */
         public String eval(String first, int data) {
-            throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        	double result = (double) Math.pow((data / 2) * 7, 3) / 5;
+            return first + " - " + result;
         }
     }
 }

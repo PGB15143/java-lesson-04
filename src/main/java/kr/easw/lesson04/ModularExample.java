@@ -58,7 +58,7 @@ public class ModularExample {
      * 상속하여 구현한 Vehicle 객체를 반환해야 합니다.
      */
     public static Vehicle getVehicle() {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+    	return new MyVehicle();
     }
 
     // 해당 클래스를 상속하여 구현하여야 합니다.
@@ -75,7 +75,28 @@ public class ModularExample {
         // 이 메서드를 통해 조금 더 나은 결과를 도출할 수 있습니다.
         public abstract void onTick(int currentTick, int fuel);
     }
+    
+    static class MyVehicle extends Vehicle {
+        public Energy getEnergy() {
+            return new HumanEnergy();
+        }
 
+        public VehicleType getType() {
+            return new Bike();
+        }
+
+        public void onTick(int currentTick, int fuel) {
+        	
+        }
+    }
+
+    // HumanEnergy + Bike 주행률 100% , 최종점수 3750
+    // CoalEnergy + Bike 주행률 4% , 최종점수 6570
+    // SunlightEnergy + Bike 주행률 100%, 최종점수 1390
+    // HumanEnergy + Car 주행률 11%, 최종점수 1244
+    // CoalEnergy + Car 주행률 4% , 최종점수 3767
+    // SunlightEnergy + Car 주행률 18%, 최종점수 931
+    
 
     static interface VehicleType {
         int getCost();
